@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes, Route, Switch } from 'react-router-dom';
+import { Routes, Route, } from 'react-router-dom';
 import './App.css';
 
 // import pages below
@@ -9,10 +9,12 @@ import ProfileCreationPage from './pages/ProfileCreationPage';
 import HomePage from './pages/HomePage';
 import FeedPage from './pages/FeedPage';
 import UserProfilePage from './pages/UserProfilePage';
+import Footer from './components/Footer';
 
 function App() {
   return (
-    <Routes>
+    <div>
+      <Routes>
         <Route exact path='/' element={<LandingPage />} />
         <Route path='/login' element={<LoginPage />} />
         <Route path='/create-profile' element={<ProfileCreationPage />} />
@@ -20,6 +22,9 @@ function App() {
         <Route path='/feed' element={<FeedPage />} />
         <Route path='/profile' element={<UserProfilePage />} />
     </Routes>
+    <Footer />
+    </div>
+
   )
 }
 
